@@ -58,10 +58,14 @@ function runSpotify() {
 function runBands() {
     var outputArray = []
     axios.get("https://rest.bandsintown.com/artists/" + operand + "/events?app_id=codingbootcamp").then(function(response){
+        if (response.data.length === 0) {
+            console.log("No Concerts Upcoming")
+        } else {
         for (var i = 0; i < 5; i++) {
             var output = response.data[i].lineup + ":\nPerforming at: " + response.data[i].venue.name + "\nIn: " + response.data[i].venue.city + ", " + response.data[i].venue.country + "\nOn: " + moment(response.data[i].datetime).format("dddd, MMMM Do YYYY, h:mm a") + "\n"
             outputArray.push(output)
             console.log(output);
+        }
         }
     var input = operator + " " + operand
     log(input, outputArray)
