@@ -19,7 +19,7 @@ Using the command "movie-this", users will access information on a requested mov
 ![OMDB IMG](https://i.imgur.com/6HbU9fR.png)
 
 * **Random:**  
-Using the command "do-what-it-says", LIRI will access one of her other commands, as chosen by the random.txt file.
+Using the command "do-what-it-says", LIRI will access one of her other commands, as chosen by the random.txt file.  
 _Note: No argument is required for the Random command_
 
 ![Random IMG](https://i.imgur.com/Yo46zfd.png)
